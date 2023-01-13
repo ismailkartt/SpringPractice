@@ -7,12 +7,12 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class MyApp {
     public static void main(String[] args) {
-        AnnotationConfigApplicationContext context=new AnnotationConfigApplicationContext(AppConfiguration.class);
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfiguration.class);
 
-        Course course=new Course();
+        Course course = new Course();
         course.setName("SQL");
 
-        CourseService service=context.getBean("zoomService",CourseService.class);
+        CourseService service = context.getBean("zoomService", CourseService.class);
         service.teachCourse(course);
         service.saveCourse(course);
         //zoomService i newlemedik rica ettik:)
